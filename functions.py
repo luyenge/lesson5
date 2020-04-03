@@ -1,3 +1,6 @@
+#
+# Mise en oeuvre de pipeline dans Jenkins
+#
 def add_two_values(value1, value2):
     """ Adds two integers
 
