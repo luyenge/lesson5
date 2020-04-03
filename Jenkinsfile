@@ -7,7 +7,8 @@ node('master') {
     dir('Lesson5') {
         printMessage('Pipeline encours d-execution')
         stage("Testing") {
-            sh "python test_functions.py"
+            #sh "python test_functions.py"
+            python test_functions.py
         }
         stage("Deploiement") {
             if (env.BRANCH_NAME == 'master') {
