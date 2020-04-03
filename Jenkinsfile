@@ -1,3 +1,4 @@
+#!/bin/bash
 node('master') {
     stage("Récupère le Code Source") {
         git 'https://github.com/luyenge/lesson5.git'
