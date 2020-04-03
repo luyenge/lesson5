@@ -6,7 +6,8 @@ node('master') {
     dir('Lesson5') {
         printMessage('Pipeline encours d-execution')
         stage("Testing") {
-           sh "export PATH \ python test_functions.py"
+           sh "export PATH"
+           sh 'python test_functions.py'
             //python test_functions.py
         }
         stage("Deploiement") {
