@@ -6,9 +6,7 @@ node('master') {
     dir('Lesson5') {
         printMessage('Pipeline encours d-execution')
         stage("Testing") {
-           sh "export PATH"
-           sh 'python test_functions.py'
-            //python test_functions.py
+           sh '. /home/maabik/.bash_profile python test_functions.py'
         }
         stage("Deploiement") {
             if (env.BRANCH_NAME == 'master') {
