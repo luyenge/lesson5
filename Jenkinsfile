@@ -1,4 +1,3 @@
-#!/bin/bash
 node('master') {
     stage("Récupère le Code Source") {
         git 'https://github.com/luyenge/lesson5.git'
@@ -7,8 +6,8 @@ node('master') {
     dir('Lesson5') {
         printMessage('Pipeline encours d-execution')
         stage("Testing") {
-           // #sh "python test_functions.py"
-            python test_functions.py
+           sh "export PATH \ python test_functions.py"
+            //python test_functions.py
         }
         stage("Deploiement") {
             if (env.BRANCH_NAME == 'master') {
